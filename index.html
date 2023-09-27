@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Cart</title>
+    <style>
+        .flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+    </style>
+</head>
+<body>
+    <h1>E-commerce Cart</h1>
+    <div class="flex-container">
+    <div class="laptop-model" data-model="Standard" class="flex-child">
+        <h2>Standard Laptop&nbsp;&nbsp;&nbsp;</h2>
+        <p>Base Price: $500</p>
+        <form>
+            <div>
+                <input type="radio" id="ram-standard-8gb" name="ram-Standard" value="8GB">
+                <label for="ram-standard-8gb">8GB RAM ($50)</label>
+            </div>
+            <div>
+                <input type="radio" id="ram-standard-16gb" name="ram-Standard" value="16GB">
+                <label for="ram-standard-16gb">16GB RAM ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-standard-256gb" name="storage-Standard" value="256GB">
+                <label for="storage-standard-256gb">256GB SSD ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-standard-512gb" name="storage-Standard" value="512GB">
+                <label for="storage-standard-512gb">512GB SSD ($150)</label>
+            </div>
+            <button type="button" onclick="addToCart('Standard')">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="laptop-model" data-model="Pro" class="flex-child">
+        <h2>Pro Laptop</h2>
+        <p>Base Price: $1500</p>
+        <form>
+            <div>
+                <input type="radio" id="ram-pro-8gb" name="ram-Pro" value="8GB">
+                <label for="ram-pro-8gb">8GB RAM ($50)</label>
+            </div>
+            <div>
+                <input type="radio" id="ram-pro-16gb" name="ram-Pro" value="16GB">
+                <label for="ram-pro-16gb">16GB RAM ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-pro-256gb" name="storage-Pro" value="256GB">
+                <label for="storage-pro-256gb">256GB SSD ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-pro-512gb" name="storage-Pro" value="512GB">
+                <label for="storage-pro-512gb">512GB SSD ($150)</label>
+            </div>
+            <button type="button" onclick="addToCart('Pro')">Add to Cart</button>
+        </form>
+    </div>
+
+    <div class="laptop-model" data-model="Ultra" class="flex-child">
+        <h2>Ultra Laptop</h2>
+        <p>Base Price: $2500</p>
+        <form>
+            <div>
+                <input type="radio" id="ram-ultra-8gb" name="ram-Ultra" value="8GB">
+                <label for="ram-ultra-8gb">8GB RAM ($50)</label>
+            </div>
+            <div>
+                <input type="radio" id="ram-ultra-16gb" name="ram-Ultra" value="16GB">
+                <label for="ram-ultra-16gb">16GB RAM ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-ultra-256gb" name="storage-Ultra" value="256GB">
+                <label for="storage-ultra-256gb">256GB SSD ($100)</label>
+            </div>
+            <div>
+                <input type="radio" id="storage-ultra-512gb" name="storage-Ultra" value="512GB">
+                <label for="storage-ultra-512gb">512GB SSD ($150)</label>
+            </div>
+            <button type="button" onclick="addToCart('Ultra')">Add to Cart</button>
+        </form>
+    </div>
+    </div>
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added dynamically here -->
+        </ul>
+        <p>Total Price: $<span id="total-price">0</span></p>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
