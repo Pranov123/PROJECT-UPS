@@ -1,2 +1,6 @@
 # PROJECT-UPS
-Delta round 1 project-U Pranov Shanker
+Delta round 1 project-FRONTEND ENGINEERING
+NAME: U Pranov Shanker
+CLASS AND SEC: IoT-B
+YEAR: 1ST
+PROBLEM STATEMENT COMPLETED: Till problem 2
